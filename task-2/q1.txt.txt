@@ -1,0 +1,41 @@
+             Differences Between the Document and Window Objects
+
+	*  The document and the windows object are the most effective methods in the javascript because they are very easy representation of the objects and they are very easy to call functions.In the document method the keyword document is used to get the element by means of id or class name or name or tags that are used in the programming language.In the windows function the keyword windows are used to set timedelay to the functions and open new windows and other such functions.
+	
+	*  The "document" object represents the web page itself. They can provides an access to the contents in the browsers  and the structure of the web page, including HTML elements, CSS styles, and more specific functions. You can use the "document" object to manipulate and interact with the content of the page,and we can use the "windows" function to certain tasks such as time delay functions and the window representations.
+
+  	*  The "window" object represents the browser window or tab. They are the global context for JavaScript in the browser. The "window" object allows you to control the browser environment, manage timers, handle events, open new windows or tabs, and interact with the DOM. They are like the container or the box that holds the entire webpage and its associated with the JavaScript code.The "document" object is about the content of the page, while the "window" object is about the browser environment and interactions.
+
+ 	
+	(i)The Document Object:
+
+	 The `document` object provides methods and properties for managing the structure, content, and styling of the page. Some common tasks performed using the `document` object include selecting elements, modifying HTML content, and changing styles.
+
+	* The document object can Represents the content of an HTML document in the javascript.
+	* They can Provides an access to the DOM(document object module) elements, allowing them to  manipulation of content and structure.
+	* Offers methods like "getElementById", "querySelector", and "createElement" for selecting and creating elements.
+	* Enables content modification through methods like "innerHTML" and "textContent".
+	
+	For example:
+	
+		document.getElementById("ID Name")
+	by this we can easily print the innerhtml elements.
+		by using createElement and getElementByClassName we can easily access the html tags and elements.
+
+
+	(ii)The Window Object:
+
+	The "window" object represents the browser window or tab containing the web page.  They includes other important aspects of the browser environment, such as the location of the page, the browser's history, and the ability to control the window's behavior.
+
+	* The window object Represents the browser window or tab.
+	* Serves as the global object for the browser's JavaScript environment.
+	* they can includes properties like "location", "history", and "navigator" to access information about the browser.
+	*Enables opening new windows or tabs using methods like `open`.
+	* They can also set timeouts and intervals using "setTimeout" and "setInterval".
+
+	For example:
+		windows.setTimeout(3000);
+		windows.location;
+		windows.history;
+		windows.navigation;
+		-they canset delay time of 3seconds for printing the console.And we can easily access the window location any time and find the history and navigate from any places.

@@ -1,0 +1,33 @@
+HTTP1.1 and HTTP2:
+
+Introduction:
+   	
+	In the current world there are large number of advanced technologies are used to run the environment in web pages and web browsers.But after the introduction of http (Hyper text transfer protocol) there will be a efficient transfer of informations between the user and the clients.The http will relay communication transfer between a user(client) and server.
+	The http protocol will define how the user and client make can efficient communication transfers in web browsers.There are so many versions that are developed after some versions limitations.In the http1.1 has some advantages and certain disadvantages and all the disadvantages are satisfied with the next versions of http2.
+
+Differnce between HTTP1.1 and HTTP2:
+    
+   Multiplexing:
+	
+   HTTP/1.1:   The HTTP/1.1 protocol, browsers are  establish multiple connections to the server and to load resources such as images, scripts,html files and stylesheets. Each of these connections is time-consuming to set up and maintain.But this has some disadvantages.
+   HTTP/2:   One of the major enhancements in HTTP/2 is multiplexing, which allows multiple requests and responses to be sent and received on a single connection. This eliminates the need for multiple connections, reducing latency and improving overall performance.
+
+   Header Compression:
+
+   HTTP/1.1:   The HTTP/1.1, headers are sent with each request and response, which can lead to high overhead, especially when loading numerous resources.
+   HTTP/2:  The HTTP/2 introduces header compression using the HPACK algorithm. This minimizes header size, reducing bandwidth consumption and speeding up data transmission.
+
+   Server Push:
+
+   HTTP/1.1:   In the previous protocol, the browser had to request each resource individually. This led to situations where the server would send unnecessary resources, causing performance bottlenecks.
+   HTTP/2:   Server Push is a new feature that allows the server to initiate the sending of resources to the client before the client explicitly requests them. This results in faster page load times, as critical resources can be pushed proactively to the client.
+
+Prioritization:
+
+    HTTP/1.1: Requests made by the browser are often processed in the order they are received, regardless of their importance. This can lead to slower loading times for critical resources.
+HTTP/2: The introduction of stream prioritization in HTTP/2 enables the browser to specify the order in which resources should be loaded. This ensures that essential resources are fetched and displayed quickly, enhancing the user experience.
+
+
+Conclusion:
+  
+     With features such as multiplexing, header compression, server push, prioritization, and binary framing, HTTP/2 addresses many of the performance limitations of its predecessor.But in These improvements lead to faster page load times, reduced latency, and an overall enhanced user experience. As websites and applications continue to evolve, adopting HTTP/2 becomes a crucial step in delivering content efficiently and effectively to users across the globe.

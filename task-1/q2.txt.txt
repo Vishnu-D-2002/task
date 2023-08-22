@@ -1,0 +1,42 @@
+Objects and its internal representation:
+
+Introduction:
+	
+	The objects are the important terms in the javascript because they are highly used to store many data types such as numbers , floats , and strings in the one r single object type.
+The objects are creted means they are very east to call and print in the javascript and they also has some of the methods to easy represent of the objects.
+
+	Objects are important data types in javascript and they are different than primitive datatypes (i.e. number, string, boolean, etc.). Primitive data types contain one value but Objects can hold many values in form of Key: value pair. These keys can be variables or functions and are called properties and methods.
+
+	Every object has some property associated with some value. These values can be accessed using these properties associated with them.An object, is a reference data type. Variables that are assigned a reference value are given a reference or a pointer to that value.
+
+	For Eg. If your object is a student, it will have properties like name, age, address, id, etc and methods like updateAddress, updateNam, etc.
+
+	for example:
+
+	function job()={
+		name=vishnu;
+		id=23443;
+		sex=male;
+		job=ceo;
+		salary=100lpa;
+		}
+	
+for printing the objects
+
+	console.log(job.name);
+	console.log(job.id);
+	console.log(job.sex);
+	console.log(job.job);
+	console.log(job.salary);
+ example:
+
+	let bike = {name: 'SuperSport', maker:'Ducati', engine:'937cc'};
+
+function Vehicle(name, maker) {
+   this.name = name;
+   this.maker = maker;
+}
+
+	Conclution:
+ 		There are so many object method . object.keys() , object.values() ,object.entries() are used.
+	The keys will take only the key pair in object and values will take only the values pair . But the object.entries can make the both the keys and values in the array format with key value pairs.
