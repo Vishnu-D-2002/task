@@ -8,7 +8,7 @@ let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 let b = [];
 let oddNumbers = function (a) {
     for (let num of a) {
-        if (num % 2 !== 0)
+        if (num % 2 == 1)
             b.push(num);
     }
     console.log(b);
@@ -23,7 +23,7 @@ let c = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 let d = [];
 (() => {
     for (let res of c) {
-        if (res % 2 !== 0) 
+        if (res % 2 == 1) 
             d.push(res);
     } console.log(d);
 })(c);
