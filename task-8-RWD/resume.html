@@ -11,9 +11,6 @@
             integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
             <style>
-                span{
-                    display:inline;
-                }
                 .checked {
                     color: orange;
                 }
@@ -23,44 +20,128 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <label for="name">Name <span style="color: red;">*</span></label><br>
+                <label for="name"><b>Name</b> <span style="color: red;">*</span></label><br>
                 <div class="col">
-                    <input type="" id="name" name="name" 
-                    style="width: 100%;margin-left: 0.5%;">
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-square"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
-                        <path
-                            d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
-                    </svg><br> -->
+                    <input type="text" class="form-control is-invalid" id="validationServerUsername"
+                        aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required style="border: 2px solid black;">
                     
                     <label for="">First </label>
                 </div>
                 <div class="col">
-                    <input type="text" id="name" name="name" style="width: 100%;margin-left: 0.5%;margin-left: 0px;"><br>
+                    <input type="text" id="name" name="name" style="width: 100%;margin-left: 0.5%;margin-left: 0px;height: 38px;border-radius: 4px;border: 2px solid black;" ><br>
                     <label for="">Last</label>
                 </div>
                 <div class="col"></div>
 
                 <div class="row">
                     <div class="col-sm">
-                        <label for="email">Email <span style="color: red">*</span></label><br>
-                        <input type="text" name="email" id="email" style="width: 143%;">
+                        <label for="email"><b>Email </b><span style="color: red">*</span></label><br>
+                        <input type="text" name="email" id="email" style="width: 143%;border-radius: 4px;height: 38px;border: 2px solid black;">
                     </div>
                     <div class="col"></div>
                 </div>
             </div>
             <div class="row">
-                <label for="rating">Your Experience <span style="color: red">*</span></label><br>
+                <b for="rating">Your Experience <span style="color: red">*</span></b><br>
             </div>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span><br>
+            Overall, How would you rate you experience with us ?
+        </div>
+        <div class="row-md">
+            <b style="margin-left: 13px;"> How satisfied are you with <span style="color: red">*</span></b>
         </div>
 
+        <div class="row">
+            <div class="col"></div>
+            <div class="col text-center">Very Unsatisfied</div>
+            <div class="col text-center">Unsatisfied</div>
+            <div class="col text-center">Neutral</div>
+            <div class="col text-center">satisfied</div>
+            <div class="col text-center">Very Satisfied</div>
+        </div>
+
+        <div class="row" style="background-color: rgb(224, 228, 228);">
+            <div class="col head">Purchase</div>
+            <div class="col radio text-center" ><input type="radio" name="Purchase"></div>
+            <div class="col radio text-center" ><input type="radio"  name="Purchase"></div>
+            <div class="col radio text-center" ><input type="radio"  name="Purchase"></div>
+            <div class="col radio text-center"><input type="radio"  name="Purchase"></div>
+            <div class="col radio text-center"><input type="radio"  name="Purchase"></div>
+        </div>
+
+        <div class="row">
+            <div class="col">Service</div>
+            <div class="col radio text-center"><input type="radio" name="Service"></div>
+            <div class="col radio text-center"><input type="radio" name="Service"></div>
+            <div class="col radio text-center"><input type="radio" name="Service"></div>
+            <div class="col radio text-center"><input type="radio" name="Service"></div>
+            <div class="col radio text-center"><input type="radio" name="Service"></div>
+        </div>
+
+        <div class="row" style="background-color: rgb(224, 228, 228);">
+            <div class="col">Company overall</div>
+            <div class="col radio text-center"><input type="radio" name="company"></div>
+            <div class="col radio text-center"><input type="radio" name="company"></div>
+            <div class="col radio text-center"><input type="radio" name="company"></div>
+            <div class="col radio text-center"><input type="radio" name="company"></div>
+            <div class="col radio text-center"><input type="radio" name="company"></div>
+        </div>
+
+
+                <div class="row-md">
+                    <b style="margin-left: 13px;"> How likely are you to <span style="color: red">*</span></b>
+                </div>
+                
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col text-center">Very Unlikely</div>
+                    <div class="col text-center">Unlikely</div>
+                    <div class="col text-center">Neutral</div>
+                    <div class="col text-center">Likely</div>
+                    <div class="col text-center">Very likely</div>
+                </div>
+                
+                <div class="row" style="background-color: rgb(224, 228, 228);">
+                    <div class="col radio text-center">By from us again</div>
+                    <div class="col radio text-center"> <input type="radio" name="a"></div>
+                    <div class="col radio text-center"><input type="radio" name="a"></div>
+                    <div class="col radio text-center"><input type="radio" name="a"></div>
+                    <div class="col radio text-center"><input type="radio" name="a"></div>
+                    <div class="col radio text-center"><input type="radio" name="a"></div>
+                </div>
+                
+                <div class="row">
+                    <div class="col">Recommend our product to others</div>
+                    <div class="col radio text-center"><input type="radio" name="b"></div>
+                    <div class="col radio text-center"><input type="radio" name="b"></div>
+                    <div class="col radio text-center"><input type="radio" name="b"></div>
+                    <div class="col radio text-center"><input type="radio" name="b"></div>
+                    <div class="col radio text-center"><input type="radio" name="b"></div>
+                </div>
+                
+                <div class="row" style="background-color: rgb(224, 228, 228);">
+                    <div class="col head">Recommend our company to others</div>
+                    <div class="col radio text-center"><input type="radio" name="c"></div>
+                    <div class="col radio text-center"><input type="radio" name="c"></div>
+                    <div class="col radio text-center"><input type="radio" name="c"></div>
+                    <div class="col radio text-center"><input type="radio" name="c"></div>
+                    <div class="col radio text-center"><input type="radio" name="c"></div>
+                </div>
+
+                <div class="row">
+                <div class="m-2"><b>Additional commands or suggestions</b>
+                    <div style="border: 2px solid;" class="form-floating m-2">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                            style="height: 100px"></textarea>
+                        <label for="floatingTextarea2"></label>
+                    </div>
+                </div>
+                </div>
+                <button type="submit" style="padding: 10px;margin: 15px;">Submit</button>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
