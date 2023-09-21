@@ -21,6 +21,7 @@
                 font-size: large;
                 font-weight: bold;
                 background-color: bisque;
+                box-shadow: 4px 6px 2px 5px rgb(62, 63, 62);
             }
 
             .input {
@@ -39,21 +40,35 @@
                 border: 2px solid black;
                 border-radius: 8px;
                 margin-left: 25vw;
-                margin-top: 5vh;
-                margin-bottom: 4vh;
+                margin-top: 3vh;
+                margin-bottom: 1.5vh;
                 background-color: hwb(0 65% 2%);
             }
 
-            #table,th,td{
+            #table,
+            th,
+            td {
                 border: 2px solid black;
                 border-collapse: collapse;
+                margin-left: 18vw;
+                padding: 10px;
+                background-color: rgb(246, 254, 204);
+                font-weight: bold;
+                width: auto;
+            }
+
+            select {
+                height: 4vh;
+                border: 2px solid black;
+                font-weight: bold;
+                font-size: 15px;
             }
         </style>
     </head>
 
     <body>
         <div class="container">
-            <form action="#" id="form" >
+            <form action="#" id="form">
                 <div id="box">
                     <div>
                         <label for="fname">First Name</label><br>
@@ -74,16 +89,16 @@
                         <label for="pcode">PinCode</label><br>
                         <input type="number" id="pcode" name="pincode" class="input" autocomplete="off" minlength="6"
                             maxlength="6">
-                    </div><br>
+                    </div>
                     <div id="gen">
-                        <h3>Gender</h3>
+                        <p>Gender</p>
                         <input type="radio" id="male" name="gender" value="male">
                         <label for="male">Male</label>
                         <input type="radio" id="female" name="gender" value="female" required>
                         <label for="female">Female</label>
-                    </div><br>
+                    </div>
                     <div id="food">
-                        <h3>Choice Of Food</h3>
+                        <p>Choice Of Food</p>
                         <input type="checkbox" id="cb" name="food" value="chicken Biriyani">
                         <label for="cb">Chicken Biriyani</label><br>
                         <input type="checkbox" id="mb" name="food" value="mutton Biriyani">
@@ -126,69 +141,26 @@
             </form>
 
         </div>
-            <div>
-                <table id="table">
-                    <tr>
-                        <thead>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Address</th>
-                            <th>PinCode</th>
-                            <th>Gender</th>
-                            <th>Choice Of Food</th>
-                            <th>State</th>
-                            <th>Country</th>
-                        </thead>
-                        <tbody id="tbody">
+        <div>
+            <table id="table">
+                <tr>
+                    <thead>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Address</th>
+                        <th>PinCode</th>
+                        <th>Gender</th>
+                        <th>Choice Of Food</th>
+                        <th>State</th>
+                        <th>Country</th>
+                    </thead>
+                    <tbody id="tbody">
 
-                        </tbody>
-                    </tr>
-                </table>
-            </div>
-        <script>
-
-            document.addEventListener('DOMContentLoaded',function(){
-                const form = document.getElementById("form");
-                const tbody = document.querySelector("#tbody");
-
-                form.addEventListener('submit',function(e){
-
-                    e.preventDefault();
-
-                    const fname = document.getElementById('fname').value;
-                    const lname = document.getElementById('lname').value;
-                    const address = document.getElementById('address').value;
-                    const pcode = document.getElementById('pcode').value;
-                    const gender = document.querySelector('input[name="gender"]:checked').value;
-                    const food=document.querySelectorAll('input[name="food"]:checked');
-                    const foods=Array.from(food).map(choice=>choice.value).join(',');
-                    const state=document.getElementById('state').value;
-                    const country=document.getElementById('country').value;
-
-
-                    const newRow=tbody.insertRow();
-                    const c0 = newRow.insertCell(0);
-                    const c1 = newRow.insertCell(1);
-                    const c2 = newRow.insertCell(2);
-                    const c3 = newRow.insertCell(3);
-                    const c4 = newRow.insertCell(4);
-                    const c5 = newRow.insertCell(5);
-                    const c6 = newRow.insertCell(6);
-                    const c7 = newRow.insertCell(7);
-
-                    c0.innerHTML=fname;
-                    c1.innerHTML=lname;
-                    c2.innerHTML=address;
-                    c3.innerHTML=pcode;
-                    c4.innerHTML=gender;
-                    c5.innerHTML=foods;
-                    c6.innerHTML=state;
-                    c7.innerHTML=country;
-
-                    form.reset();
-                })
-            });
-
+                    </tbody>
+                </tr>
+            </table>
+        </div>
+        <script src="./script.js">
         </script>
     </body>
 
