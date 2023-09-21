@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* text-align: center; */
+        }
+        #table{
+            border: 2px solid black;
+            border-radius: 15px;
+            width: 60vw;
+            margin: 20px;
+            padding: 10px;
+            font-size: large;
+            font-weight: bold;
+            background-color: bisque;
+        }
+        .input{
+            width: 100%;
+            height: 25px;
+            border: 2px solid black;
+            border-radius: 8px;
+            background-color: beige;
+            font-size: large;
+            font-weight: bold;
+        }
+        button{
+            font-size: large;
+            font-weight: bold;
+            border: 2px solid black;
+            border-radius: 8px;
+            margin-left: 25vw;
+            margin-top: 5vh;
+            margin-bottom: 4vh;
+        }
+        /* #food{
+            text-align:center;
+        }
+        label{
+            text-align: left;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form action="">
+        <div id="table">
+        <div>
+            <label for="fname">First Name</label><br>
+            <input type="text" id="fname" class="input" autocomplete="name" name="First name" required>
+        </div><br>
+        <div>
+            <label for="lname">Last Name</label><br>
+            <input type="text" id="lname" class="input" autocomplete="name" name="Last name" required>
+        </div><br>
+        <div>
+            <label for="address">Address</label><br>
+            <input type="text" id="address"class="input" autocomplete="address-level1" name="address" required>
+        </div><br>
+        <div>
+            <label for="pcode">PinCode</label><br>
+            <input type="number" id="pcode" name="pincode"  class="input" autocomplete="cc-number" minlength="6" maxlength="6">
+        </div><br>
+        <div id="gen">
+            <h3>Gender</h3>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+        </div><br>
+        <div id="food">
+            <h3>Choice Of Food</h3>
+            <input type="checkbox" id="cb" name="food" value="chicken Biriyani">
+            <label for="cb">chicken Biriyani</label><br>
+            <input type="checkbox" id="mb" name="food" value="mutton Biriyani">
+            <label for="mb">Mutton Biriyani</label><br>
+            <input type="checkbox" id="c65" name="food" value="chicken 65">
+            <label for="c65">spicy chicken 65 </label><br>
+            <input type="checkbox" id="parota" name="food" value="parota">
+            <label for="parota">chicken parotas</label><br>
+            <input type="checkbox" id="dosa" name="food" value="dosa">
+            <label for="dosa">Dosa & pongal </label>
+
+        </div><br>
+        <div>
+            <label for="state">State</label>
+            <select name="state" id="state" required>
+                <option >---select---</option>
+                <option value="Tamilnadu">Tamilnadu</option>
+                <option value="kerala">Kerala</option>
+                <option value="ap">Andhra pradesh</option>
+                <option value="karnataka">karnataka</option>
+                <option value="gujarat">Gujarat</option>
+            </select>
+        </div><br>
+        <div>
+            <label for="country">Country</label>
+            <select name="country" id="country" required>
+                <option >---select---</option>
+                <option value="india">India</option>
+                <option value="australia">Australia</option>
+                <option value="china">China</option>
+                <option value="bangladesh">Bangladesh</option>
+                <option value="belgium">Belgium</option>
+                <option value="brazil">Brazil</option>
+                <option value="greece">Greece</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit" onclick="formTable()">SUBMIT</button>
+        </div>
+        </div>
+        </form>
+    </div>
+
+    <script>
+        function formTable(){
+        const fname=document.getElementById('fname').value;
+        let lname = document.getElementById('lname').value;
+        let address = document.getElementById('address').value;
+        let pcode = document.getElementById('pcode').value;
+        let gender = document.querySelector('input[name="gender"]:checked').value;
+        console.log(fname.lname,address,pcode,gender);
+        console.log(fname);
+    }
+    </script>
+</body>
+</html>
