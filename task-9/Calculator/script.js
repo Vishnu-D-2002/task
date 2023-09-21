@@ -131,6 +131,6 @@
                 try {
                     input.value = eval(input.value);
                 } catch (error) {
-                    alert('invalid');
+                    alert('Only numbers are allowed');
                 }
             }
