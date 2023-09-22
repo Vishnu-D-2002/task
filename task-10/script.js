@@ -1,6 +1,6 @@
 
 let displayScreen = function(num, callback){
-    if (num === 0) {
+    if (num === -1) {
         callback();
     }
     else {
