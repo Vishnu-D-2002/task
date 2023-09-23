@@ -35,7 +35,7 @@
                         <h3 class="card-text d-flex justify-content-center mt-3"> Capital: ${capital}</h3>
                         <h3 class="card-text d-flex justify-content-center mt-2"> Region : ${region}</h3>
                         <h3 class="card-text d-flex justify-content-center mt-2"> Country Code : ${countryCode}</h3>
-                        <button class="btn btn-success rounded-5 mt-3 btn btn-outline-warning" id="btn">Weather Information</button>
+                        <button class="btn btn-success rounded-5 mt-3 btn btn-outline-warning btn btn-primary btn-lg" id="btn">Weather Information</button>
                         <div class='mt-3 d-flex justify-content-center' id='res'></div>`
 
 
