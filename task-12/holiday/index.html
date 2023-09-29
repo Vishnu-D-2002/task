@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Holidays</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+            select {
+                width: 59vw;
+                height: 6vh;
+                font-size: larger;
+                border: 2px solid black;
+                border-radius: 10px;
+                background-color: beige;
+            }
+
+            button {
+                border-radius: 10px;
+                height: 6vh;
+            }
+
+            body{
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="mt-5">Holidays List</h1>
+
+                    <div>
+                        <select name="countries" id="countries" class="mt-5">
+                            <option>--- SELECT YOUR COUNTRY NAME ---</option>
+                        </select>
+                        <button id="submitBtn" class="m-4 btn btn-info btn btn-outline-danger">SUBMIT</button>
+                    </div>
+
+                    <div id="dispDiv">
+                        <!-- Holidays will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            // Fetch the list of countries and populate the dropdown
+            fetch("https://holidayapi.com/v1/countries?pretty&key=2ab7fc88-c0d4-49c3-a86c-6e4e4642d84a")
+                .then(res => res.json())
+                .then(ans => {
+                    let selectDrop = document.getElementById('countries');
+                    let res = ans.countries;
+                    res.forEach(country => {
+                        let option = document.createElement('option');
+                        option.innerHTML =country.name;
+                        option.value = `${country.code}`;
+                        selectDrop.appendChild(option);
+                        // console.log(option)
+                    });
+                });
+
+            // Add event listener to the SUBMIT button
+            let submitBtn = document.getElementById('submitBtn');
+            submitBtn.addEventListener('click', () => {
+                // Get the selected country code
+                let selectedCountryCode = document.getElementById('countries').value;
+
+                // Fetch and display holidays for the selected country
+                fetch(`https://holidayapi.com/v1/holidays?country=${selectedCountryCode}&year=2022&pretty&key=2ab7fc88-c0d4-49c3-a86c-6e4e4642d84a`)
+                    .then(res => res.json())
+                    .then(ans => {
+                        let dispDiv = document.getElementById('dispDiv');
+                        dispDiv.innerHTML = ''; // Clear previous content
+                        console.log(ans)
+                        let Holidays = ans.holidays;
+
+                        Holidays.forEach(holiday => {
+                            // console.log(holiday.name)
+                            let para=document.createElement('p');
+                            para.innerHTML=`<b>Holiday Name :<i> ${holiday.name}</i></b><br>
+                                            <b>Holiday Date :<i> ${holiday.date}</i></b><br>
+                                            <b>Holiday Day :<i> ${holiday.weekday.date.name}</i></b>`
+                            dispDiv.appendChild(para);
+
+                        })
+                    });
+            });
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+            </script>
+    </body>
+
+</html>
