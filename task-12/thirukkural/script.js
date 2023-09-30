@@ -1,47 +1,53 @@
-            let body = document.getElementById('body');
+//  we want to get the element the  from the html
 
-            async function explain(num) {
-                const explainDiv = document.querySelectorAll(".explainDiv")[num - 1];
-                explainDiv.innerHTML = ""; // Clear previous explanations
+    let inputBox = document.querySelector(".inputBox")
+    let buttonSearch=document.querySelector(".buttonSearch")
+    let meaning = document.querySelector('.meaning');
+    
+//we want to use async function for efficient output
+async function search() {
+        // for  error handling we can use try and catch
+    try {
+    // get the word from the user and store 
+        const word = inputBox.value;
+        // api link is  fetched and converted to json 
+   let res=await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
+   let data=await res.json();
+//  console.log(data)
+        let meaningword = data[0].meanings;
+        
+        //we want  to create the list and list items
 
-                fetch(`https://api-thirukkural.vercel.app/api?num=${num}`)
-                    .then(res => res.json())
-                        .then(data => {
-                            let explain = document.createElement('div');
-                            explain.innerHTML = `<hr>
-                        <h3 class="red">${data.sect_tam}</h3>
-                        <h3>${data.chap_tam}</h3>
-                        <p>${data.tam_exp}</p>
-                        <h3 class="red">${data.sect_eng}</h3>
-                        <h3>${data.chap_eng}</h3>
-                        <p>${data.eng}</p>
-                        <p>${data.eng_exp}</p><hr>`;
-                            explainDiv.appendChild(explain);
-                        });
+        let list = document.createElement('ul')
+        list.style.listStyleType = 'none';
+        //use the loop for meaning handle
 
-                explainDiv.style.display = "block"; // Show the explanation div
-            }
+    for(let partOfSpeech of meaningword ){
+        let listItem = document.createElement('li');
+        // to append the inner html listItem
 
-            async function displayKural() {
-                try {
-                    for (let num = 1; num <= 1330; num++) {
-                        let res = await fetch(`https://api-thirukkural.vercel.app/api?num=${num}`);
-                            res = await res.json();
+        listItem.innerHTML = ` <b class="red">Part Of Speech : ${partOfSpeech.partOfSpeech}</b>`;
+        // to create the order list in the sublist
 
-                        let full = document.querySelector(".full")
-                        let para = document.createElement('p')
-                        para.innerHTML = `
-                    <div>
-                        <h3>${res.number} : ${res.line1}</h3>
-                        <h3>${res.line2}</h3>
-                        <button class="expBtn btn btn-info" onclick="explain(${res.number})">Explanation</button><br>
-                        <div class="explainDiv"></div><br><br>
-                    </div>`;
-                        full.appendChild(para)
-                    }
-                } catch (error) {
-                    console.log('error in fetching', error);
-                }
-            }
+        let subList = document.createElement('ol');
+        
+    for (let definition of partOfSpeech.definitions) {
+            let subListItem = document.createElement('li');
+            subListItem.innerHTML = `${definition.definition}`;
+            subList.appendChild(subListItem);
+        }
 
-            displayKural();
+        // append the sublist to the list item
+        listItem.appendChild(subList);
+
+        // append the list items to the main list
+        list.appendChild(listItem);
+    }
+
+meaning.innerHTML=``;
+meaning.appendChild(list);
+}
+catch (error) {
+    console.log('error fetching the meaning', error);
+}
+}

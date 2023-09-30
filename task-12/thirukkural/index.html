@@ -4,47 +4,63 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Thirukkural Book</title>
+        <title>Dictionary</title>
+
+        <!-- import bootstrap css cdn -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <style>
-            body {
-                background-color: bisque;
-            }
-
-            h1 {
-                text-align: center;
-                margin-bottom: 50px;
-            }
-
-            .explainDiv {
-                display: none;
-            }
-            
-            button{
-                border-radius: 5px;
-            }
-
-            h3{
-                font-size: 25px;
-                font-weight: bolder;
-            }
-        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
+    <style>
+        body {
+            background-color: rgba(30, 47, 160, 0.299);
+        }
+
+        h1 {
+            color: rgb(23, 23, 23);
+            text-align: center;
+            margin-bottom: 7vh;
+            margin-top: 5vh;
+            font-size: 70px;
+        }
+
+        .red {
+            color: rgb(149, 18, 237);
+        }
+
+    </style>
 
     <body>
-        <div class="container">
+
+        <div class="container mt-4">
+            <h1>Dictionary</h1>
+            <label><h5>Enter the  word to find the meaning </h5></label>
             <div class="row">
-                <div class="full">
-                    <h1 class="mt-5">THIRUKKURAL BOOK</h1>
-                    <div id="body"></div>
+                <div class="col-sm-8">
+                    <form class="dictform form-inline">
+                        <div class="form-group">
+                            <input type="text" placeholder="type a word here..." class="inputBox form-control mt-3">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-sm-4">
+                    <button type="submit" class="buttonSearch btn btn-info mt-3"
+                        onclick="search()">Search</button>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="meaning col-12 mt-4">
+
+                </div>
+            </div>
+
         </div>
 
-        <script src="script.js">
-        </script>
-
+        <script src="./script.js"></script>
     </body>
 
 </html>
