@@ -13,7 +13,7 @@
                     });
                 })
                 .catch(error => {
-                    console.error();
+                    console.log('error', error);
                 });
 
             // Add event listener to the SUBMIT button
@@ -43,5 +43,5 @@
                     });
                 })
                 .catch(error => {
-                    console.error();
+                    console.log('error',error);
                 })
