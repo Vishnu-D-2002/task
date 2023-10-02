@@ -59,16 +59,16 @@ let one = (callback) => {
         callback();
     },1000)
 }
-ten(function () {
-    nine(function () {
-        eight(function () {
-            seven(function () {
-                six(function () {
-                    five(function () {
-                        four(function () {
-                            three(function () {
-                                two(function () {
-                                    one(function () {
+ten( () => {
+    nine( () =>{
+        eight( () =>{
+            seven( () =>{
+                six( () =>{
+                    five( () => {
+                        four( () => {
+                            three( () => {
+                                two( () => {
+                                    one( () => {
                                         setTimeout(() => {     
                                         display.innerHTML =
                                         `<p><span id="happy">HAPPY</span></p>
