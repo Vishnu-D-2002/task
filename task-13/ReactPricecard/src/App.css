@@ -1,0 +1,31 @@
+li{
+    list-style-type: none;
+    font-size: 15px;
+    /* text-align: ; */
+}
+#first,#second,#third{
+    width: 30%;
+    display: inline-block;
+    padding: 5px;
+    background-color:white;
+    margin: 6px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+h6,h1{
+    text-align: center;
+}
+button{
+    width: 100%;
+    background-color: hsl(214, 93%, 56%);
+    height: 5vh;
+    color: white;
+    font-size: x-small;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+#container{
+    border: 2px solid black;
+    background-color: aqua;
+}
