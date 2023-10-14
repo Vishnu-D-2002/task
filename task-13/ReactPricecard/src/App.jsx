@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App({ PriceCard1 , PriceCard2 , PriceCard3 }) {
@@ -16,7 +15,7 @@ function App({ PriceCard1 , PriceCard2 , PriceCard3 }) {
           )
         }
         </ul>
-        <button>BUTTON</button>
+        <button disabled>BUTTON</button>
     </div>
     <div id='second'>
       <h6>PLUS</h6>
@@ -28,7 +27,7 @@ function App({ PriceCard1 , PriceCard2 , PriceCard3 }) {
           )
         }
         </ul>
-        <button>BUTTON</button>
+        <button disabled>BUTTON</button>
       </div>
       <div id='third'>
       <h6>PRO</h6>
@@ -40,7 +39,7 @@ function App({ PriceCard1 , PriceCard2 , PriceCard3 }) {
           )
         }
         </ul>
-        <button type='submit'>BUTTON</button>
+        <button type='submit'><a href='#'>BUTTON</a></button>
       </div>
     </div>
   )
