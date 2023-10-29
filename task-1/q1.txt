@@ -25,9 +25,9 @@ Differnce between HTTP1.1 and HTTP2:
 Prioritization:
 
     HTTP/1.1: Requests made by the browser are often processed in the order they are received, regardless of their importance. This can lead to slower loading times for critical resources.
-HTTP/2: The introduction of stream prioritization in HTTP/2 enables the browser to specify the order in which resources should be loaded. This ensures that essential resources are fetched and displayed quickly, enhancing the user experience.
+    HTTP/2: The introduction of stream prioritization in HTTP/2 enables the browser to specify the order in which resources should be loaded. This ensures that essential resources are fetched and displayed quickly, enhancing the user experience.
 
 
 Conclusion:
   
-     With features such as multiplexing, header compression, server push, prioritization, and binary framing, HTTP/2 addresses many of the performance limitations of its predecessor.But in These improvements lead to faster page load times, reduced latency, and an overall enhanced user experience. As websites and applications continue to evolve, adopting HTTP/2 becomes a crucial step in delivering content efficiently and effectively to users across the globe.
+    With features such as multiplexing, header compression, server push, prioritization, and binary framing, HTTP/2 addresses many of the performance limitations of its predecessor.But in These improvements lead to faster page load times, reduced latency, and an overall enhanced user experience. As websites and applications continue to evolve, adopting HTTP/2 becomes a crucial step in delivering content efficiently and effectively to users across the globe.
