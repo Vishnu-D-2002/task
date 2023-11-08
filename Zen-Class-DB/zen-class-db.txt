@@ -1,0 +1,178 @@
+
+    ZEN CLASS DATABASE MODEL DESIGN:
+
+LIST OF TABLES :
+
+    - class
+    - dashboard
+    - tasks
+    - webcode
+    - capstone
+    - queries
+    - requirements
+    - interview_tasks
+    - leaderboard
+    - syllabus
+    - placement_board
+    - certificate
+    - Portfolio
+    - Project
+    - Assessment
+-------------------------------------------------------------------------------------------------------------
+
+DESCRIPTION OF TABLES :
+
+     "Class" - Records student information for course enrollment.
+     "Dashboard" - Stores course-related data, including names and dates.
+     "Tasks" - Manages individual coursework details, deadlines, and descriptions.
+     "Webcode" - Tracks web development assignments, students, and scores.
+     "Capstone" - Contains details about final capstone projects and mentors.
+     "Queries" - Manages class modules, their descriptions, and timelines.
+     "Requirements" - Records specific task requirements, deadlines, and descriptions.
+     "Interview Tasks" - Manages mock interview information, student performance, and dates.
+     "Leaderboard" - Tracks student performance and grades for class evaluation.
+     "Syllabus" - Contains information about class syllabi and student interviews.
+     "Placement-Board" - Records placement board data, student achievements, and dates.
+     "Certificate" - Manages student certificates, course completion, and issue dates.
+     "Registration" - Records student course registrations and registration dates.
+     "Discussion_Board" - Stores discussion topics, content, and posting dates.
+     "Homework" - Manages homework assignments, submissions, and descriptions.
+
+------------------------------------------------------------------------------------------------------------------
+
+1. Class Table
+    - class_id: int (Primary Key, Auto Increment)
+    - email: varchar(255) (Unique, Not Null)
+    - password: varchar(255) (Not Null)
+    - first_name: varchar(255) (Not Null)
+    - last_name: varchar(255) (Not Null)
+    - date_of_birth: date (Not Null)
+    - created_at: datetime (Not Null)
+    - updated_at: datetime (Not Null)
+
+2. Dashboard
+    - dashboard_id: int (Primary Key, Auto Increment)
+    - dashboard_name: varchar(255) (Not Null)
+    - dashboard_description: text
+    - start_date: date (Not Null)
+    - end_date: date (Not Null)
+    - created_at: datetime (Not Null)
+    - updated_at: datetime (Not Null)
+
+3. Tasks 
+    - tasks_id: int (Primary Key, Auto Increment)
+    - dashboard_id: int (Foreign Key to Dashboard, Not Null)
+    - task_name: varchar(255) (Not Null)
+    - task_description: text
+    - task_start_date: date (Not Null)
+    - task_end_date: date (Not Null)
+    - created_at: datetime (Not Null)
+    - updated_at: datetime (Not Null)
+
+4. Webcode 
+    - webcode_id: int (Primary Key, Auto Increment)
+    - student_id: int (Foreign Key to Class, Not Null)
+    - webcode_name: varchar(255) (Not Null)
+    - webcode_description: text
+    - webcode_start_date: date (Not Null)
+    - webcode_end_date: date (Not Null)
+    - created_at: datetime (Not Null)
+    - updated_at: datetime (Not Null)
+
+5. Capstone 
+    - capstone_id: int (Primary Key, Auto Increment)
+    - capstone_name: varchar(255) (Not Null)
+    - capstone_email: varchar(255) (Not Null)
+    - created_at: datetime (Not Null)
+    - updated_at: datetime (Not Null)
+
+6. Queries 
+    - queries_id: int (Primary Key, Auto Increment)
+    - class_id: int (Foreign Key to Tasks, Not Null)
+    - queries_name: varchar(255) (Not Null)
+    - queries_description: text
+    - queries_start_date: date (Not Null)
+    - queries_end_date: date (Not Null)
+    - created_at: datetime (Not Null)
+    - updated_at: datetime (Not Null)
+
+7. Requirements 
+    - requirements_id: int (Primary Key, Auto Increment)
+    - task_id: int (Foreign Key to Queries, Not Null)
+    - requirements_name: varchar(255) (Not Null)
+    - requirements_description: text
+    - requirements_deadline: date
+    - created_at: datetime (Not Null)
+    - updated_at: datetime (Not Null)
+
+8. Interview Tasks 
+    - interview_tasks_id: int (Primary Key, Auto Increment)
+    - class_id: int (Foreign Key to Tasks, Not Null)
+    - student_id: int (Foreign Key to Class, Not Null)
+    - interview_tasks_date: date (Not Null)
+    - interview_tasks_status: varchar(255) (Not Null)
+    - created_at: datetime (Not Null)
+    - updated_at: datetime (Not Null)
+
+9. Leaderboard 
+    - leaderboard_id: int (Primary Key, Auto Increment)
+    - student_id: int (Foreign Key to Class, Not Null)
+    - class_id: int (Foreign Key to Tasks, Not Null)
+    - grade: varchar(255)
+    - comments: text
+    - created_at: datetime (Not Null)
+    - updated_at: datetime (Not Null)
+
+10. Syllabus
+    - syllabus_id: int (Primary Key, Auto Increment)
+    - student_id: int (Foreign Key to Class, Not Null)
+    - syllabus_date: date (Not Null)
+    - interviewer_id: int (Foreign Key to Capstone, Not Null)
+    - syllabus_notes: text
+    - created_at: datetime (Not Null)
+    - updated_at: datetime (Not Null)
+
+11. Placement-Board
+    - placement_board_id: int (Primary Key, Auto Increment)
+    - student_id: int (Foreign Key to Class, Not Null)
+    - placement_board_date: date (Not Null)
+    - placement_board_score: int
+    - created_at: datetime (Not Null)
+    - updated_at: datetime (Not Null)
+
+12. Certificate
+    - certificate_id: int (Primary Key, Auto Increment)
+    - student_id: int (Foreign Key to Class, Not Null)
+    - dashboard_id: int (Foreign Key to Dashboard, Not Null)
+    - issue_date: date (Not Null)
+    - created_at: datetime (Not Null)
+    - updated_at: datetime (Not Null)
+
+13. Portfolio
+    - portfolio_id: int (Primary Key, Auto Increment)
+    - student_id: int (Foreign Key to Class, Not Null)
+    - portfolio_name: varchar(255) (Not Null)
+    - portfolio_description: text
+    - created_at: datetime (Not Null)
+    - updated_at: datetime (Not Null)
+
+14. Project
+    - project_id: int (Primary Key, Auto Increment)
+    - project_name: varchar(255) (Not Null)
+    - project_description: text
+    - project_start_date: date (Not Null)
+    - project_end_date: date (Not Null)
+    - created_at: datetime (Not Null)
+    - updated_at: datetime (Not Null)
+
+15. Assessment
+    - assessment_id: int (Primary Key, Auto Increment)
+    - student_id: int (Foreign Key to Class, Not Null)
+    - assessment_name: varchar(255) (Not Null)
+    - assessment_description: text
+    - assessment_date: date (Not Null)
+    - assessment_score: int
+    - created_at: datetime (Not Null)
+    - updated_at: datetime (Not Null)
+
+-----------------------------------------------------------------------------------------------------------------------
