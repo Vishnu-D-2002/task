@@ -34,9 +34,9 @@ DESCRIPTION OF TABLES :
      "Syllabus" - Contains information about class syllabi and student interviews.
      "Placement-Board" - Records placement board data, student achievements, and dates.
      "Certificate" - Manages student certificates, course completion, and issue dates.
-     "Registration" - Records student course registrations and registration dates.
-     "Discussion_Board" - Stores discussion topics, content, and posting dates.
-     "Homework" - Manages homework assignments, submissions, and descriptions.
+     "Portfolio Table" - Stores student portfolio information for showcasing their work and achievements.
+     "Project Table" - Manages project details, timelines, and descriptions for coursework.
+     "Assessment Table" - Records student assessments, including names, descriptions, dates, and scores.
 
 ------------------------------------------------------------------------------------------------------------------
 
