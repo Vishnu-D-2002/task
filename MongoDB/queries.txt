@@ -34,7 +34,7 @@
 
 9 . Find products which contain product color indigo  and product price 492.00
 
-        query : db.products.find({product_color:"indigo",product_price:492.00})
+        query : db.products.find({product_color:"indigo",product_price:492.00});
                 - this is the query for given question and this has no output json objects
                 - incase of seperate components means the Queries are
                 - query for product_color
@@ -44,5 +44,7 @@
 
 10 . Delete the products which product price value are same
 
-        query : db.detalies.deleteMany({ product_price: { $eq: 32 } });
+        query :
+           db.detalies.aggregate([{ $group: { _id:'$product_price',dprodects:{$push:'$_id'},count:{$sum:1}}},{$match:{count:{$eq:1}}}]);
+           db.detalies.deleteMany({ product_price: { $eq: 32 } });
  

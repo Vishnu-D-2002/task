@@ -1,0 +1,26 @@
+[
+  {
+    "topic_name": "Robotics Project Development",
+    "description": "Programming robots and integrating sensors",
+    "start_date": "2023-09-25",
+    "end_date": "2023-10-25",
+    "tasks_info": [
+      {
+        "task_name": "Robotics Project",
+        "submission_date": "2023-09-25"
+      }
+    ]
+  },
+  {
+    "topic_name": "AI Ethics Research",
+    "description": "Researching ethics in Artificial Intelligence",
+    "start_date": "2023-10-10",
+    "end_date": "2023-11-10",
+    "tasks_info": [
+      {
+        "task_name": "AI Ethics Research Paper",
+        "submission_date": "2023-10-10"
+      }
+    ]
+  }
+]

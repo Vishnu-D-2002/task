@@ -1,0 +1,16 @@
+[
+  {
+    "drive_id": 10,
+    "company_name": "TechInnovate",
+    "drive_date": "2020-10-17",
+    "drive_type": "Virtual",
+    "location": "City J"
+  },
+  {
+    "drive_id": 11,
+    "company_name": "InnoSolutions",
+    "drive_date": "2020-10-20",
+    "drive_type": "On-campus",
+    "location": "City K"
+  }
+]
