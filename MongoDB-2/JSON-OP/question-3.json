@@ -3,11 +3,8 @@
     "$oid": "654e04124b7f35500d2b41b4"
   },
   "user_id": 1,
-  "drive_id": 1,
   "company_name": "TechCorp",
   "drive_date": "2022-01-20",
-  "drive_type": "On-campus",
-  "location": "City A",
   "status": "Appeared"
 },
 {
@@ -15,11 +12,8 @@
     "$oid": "654e04124b7f35500d2b41b6"
   },
   "user_id": 3,
-  "drive_id": 3,
   "company_name": "InnovateTech",
   "drive_date": "2022-03-25",
-  "drive_type": "On-campus",
-  "location": "City C",
   "status": "Appeared"
 },
 {
@@ -27,11 +21,8 @@
     "$oid": "654e04124b7f35500d2b41b8"
   },
   "user_id": 5,
-  "drive_id": 5,
   "company_name": "CodeInnovators",
   "drive_date": "2022-05-10",
-  "drive_type": "On-campus",
-  "location": "City E",
   "status": "Appeared"
 },
 {
@@ -39,11 +30,8 @@
     "$oid": "654e04124b7f35500d2b41ba"
   },
   "user_id": 7,
-  "drive_id": 7,
   "company_name": "InnoSoft",
   "drive_date": "2022-07-05",
-  "drive_type": "On-campus",
-  "location": "City G",
   "status": "Appeared"
 },
 {
@@ -51,11 +39,8 @@
     "$oid": "654e04124b7f35500d2b41bc"
   },
   "user_id": 9,
-  "drive_id": 9,
   "company_name": "CodeCrafters",
   "drive_date": "2022-09-25",
-  "drive_type": "On-campus",
-  "location": "City I",
   "status": "Appeared"
 },
 {
@@ -63,94 +48,7 @@
     "$oid": "654e04124b7f35500d2b41be"
   },
   "user_id": 11,
-  "drive_id": 11,
   "company_name": "InnoSolutions",
   "drive_date": "2020-10-20",
-  "drive_type": "On-campus",
-  "location": "City K",
-  "status": "Appeared"
-},
-{
-  "_id": {
-    "$oid": "654e04124b7f35500d2b41c0"
-  },
-  "user_id": 13,
-  "drive_id": 13,
-  "company_name": "DataTechies",
-  "drive_date": "2023-01-15",
-  "drive_type": "On-campus",
-  "location": "City M",
-  "status": "Appeared"
-},
-{
-  "_id": {
-    "$oid": "654e04124b7f35500d2b41c2"
-  },
-  "user_id": 15,
-  "drive_id": 15,
-  "company_name": "InnoCode",
-  "drive_date": "2023-03-15",
-  "drive_type": "On-campus",
-  "location": "City O",
-  "status": "Appeared"
-},
-{
-  "_id": {
-    "$oid": "654e04124b7f35500d2b41c4"
-  },
-  "user_id": 17,
-  "drive_id": 17,
-  "company_name": "DataCrafters",
-  "drive_date": "2023-05-10",
-  "drive_type": "On-campus",
-  "location": "City Q",
-  "status": "Appeared"
-},
-{
-  "_id": {
-    "$oid": "654e04124b7f35500d2b41c6"
-  },
-  "user_id": 19,
-  "drive_id": 19,
-  "company_name": "InnoMasters",
-  "drive_date": "2023-07-05",
-  "drive_type": "On-campus",
-  "location": "City S",
-  "status": "Appeared"
-},
-{
-  "_id": {
-    "$oid": "654e04124b7f35500d2b41c8"
-  },
-  "user_id": 21,
-  "drive_id": 21,
-  "company_name": "CodeInno",
-  "drive_date": "2023-09-25",
-  "drive_type": "On-campus",
-  "location": "City U",
-  "status": "Appeared"
-},
-{
-  "_id": {
-    "$oid": "654e04124b7f35500d2b41ca"
-  },
-  "user_id": 23,
-  "drive_id": 23,
-  "company_name": "InnoTech",
-  "drive_date": "2023-11-20",
-  "drive_type": "On-campus",
-  "location": "City W",
-  "status": "Appeared"
-},
-{
-  "_id": {
-    "$oid": "654e04124b7f35500d2b41cc"
-  },
-  "user_id": 25,
-  "drive_id": 25,
-  "company_name": "CodeGurus",
-  "drive_date": "2024-01-15",
-  "drive_type": "On-campus",
-  "location": "City Y",
   "status": "Appeared"
 }]
