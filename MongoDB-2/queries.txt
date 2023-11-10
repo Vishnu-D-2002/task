@@ -52,11 +52,8 @@ Queries for all questions :
                 {
                     $project: {
                     _id: 0,
-                    drive_id: 1,
                     company_name: 1,
                     drive_date: 1,
-                    drive_type: 1,
-                    location: 1
                     }
                 }
                 ]); 
@@ -83,7 +80,7 @@ Queries for all questions :
         query :
 
                 db.mentors.find().forEach(doc => {
-                if (doc.mentee_count >= 15) {
+                if (doc.mentee_count > 15) {
                     print("Mentor Name: " + doc.mentor_name + ", Mentees Count: " + doc.mentee_count);
                 }
                 });
@@ -109,7 +106,6 @@ Queries for all questions :
                     task_name: 1,
                     submission_date: 1,
                     attendance_status: "$attendance_info.status",
-                    attendance_reason: "$attendance_info.reason"
                     }
                 }
                 ]);
