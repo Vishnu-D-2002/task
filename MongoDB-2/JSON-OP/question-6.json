@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "ObjectId(\"654f43a8af54f213c88d3bcc\")",
+    "user_id": 9,
+    "task_name": "AI Ethics Research Paper",
+    "submission_date": "2020-10-25",
+    "status": "Not Submitted",
+    "task_info": [
+      {
+        "_id": "ObjectId(\"65502dd28ed4a4e587fee188\")",
+        "user_id": 9,
+        "date": "2020-10-25",
+        "status": "Absent"
+      }
+    ]
+  },
+  {
+    "_id": "ObjectId(\"654f43a8af54f213c88d3bcf\")",
+    "user_id": 12,
+    "task_name": "Final Project Presentation",
+    "submission_date": "2020-10-18",
+    "status": "Not Submitted",
+    "task_info": [
+      {
+        "_id": "ObjectId(\"65502dd28ed4a4e587fee18b\")",
+        "user_id": 12,
+        "date": "2020-10-18",
+        "status": "Absent"
+      }
+    ]
+  }
+]
